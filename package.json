@@ -9,14 +9,15 @@
     "expressjs"
   ],
   "engines": {
-    "node": "14.x",
+    "node": "14",
     "npm": "8.x"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
     "dev:linux": "export NODE_ENV=dev && nodemon app.js",
-    "dev:windows": "SET NODE_ENV=dev && nodemon app.js"
+    "dev:windows": "SET NODE_ENV=dev && nodemon app.js",
+    "build": "node app.js"
   },
   "author": "Samuel",
   "license": "MIT",
