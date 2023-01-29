@@ -9,7 +9,7 @@
     "expressjs"
   ],
   "engines": {
-    "node": "18.0.0",
+    "node": "14.x",
     "yarn": "1.22.x"
   },
   "scripts": {
@@ -17,7 +17,12 @@
     "start": "node app.js",
     "dev:linux": "export NODE_ENV=dev && nodemon app.js",
     "dev:windows": "SET NODE_ENV=dev && nodemon app.js",
-    "build": "node app.js"
+    "dev": "concurrently \"yarn dev:linux\" \"yarn start:react\"",
+    "start:react": "cd client && yarn start",
+    "start:server": "nodemon app.js",
+    "start:dev": "concurrently \"yarn start:server\" \"yarn start:react\"",
+    "build:react": "cd client && yarn build",
+    "proxy": "http://localhost:5000"
   },
   "author": "Samuel",
   "license": "MIT",
