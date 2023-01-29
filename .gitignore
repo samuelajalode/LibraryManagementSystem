@@ -2,3 +2,7 @@ node_modules
 images
 .env
 TODO
+docker-compose.yml
+Dockerfile
+yarn.lock
+.github
