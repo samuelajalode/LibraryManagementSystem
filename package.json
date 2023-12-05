@@ -17,7 +17,7 @@
     "start": "node app.js",
     "dev:linux": "export NODE_ENV=dev && nodemon app.js",
     "dev:windows": "SET NODE_ENV=dev && nodemon app.js",
-    "build": "node app.js"
+    "build": "babel src --out-dir dist --source-maps"
   },
   "author": "Samuel",
   "license": "MIT",
@@ -40,6 +40,9 @@
     "uuid": "^3.4.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.23.4",
+    "@babel/core": "^7.23.5",
+    "@babel/preset-env": "^7.23.5",
     "faker": "^4.1.0",
     "nodemon": "^2.0.16"
   },
