@@ -9,7 +9,7 @@
     "expressjs"
   ],
   "engines": {
-    "node": "14.x",
+    "node": "15.1.0",
     "yarn": "1.22.x"
   },
   "scripts": {
